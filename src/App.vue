@@ -1,5 +1,5 @@
 <template>
-    <div class="container ">
+    <div class="container">
         <form class="mtop">
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
@@ -9,7 +9,7 @@
                     <!-- Mail -->
                     <!-- Password -->
                     <!-- Store Data? Yes/No -->
-                    <app-form v-if="!submitted" :form="myForm" />
+                    <app-form v-if="!myForm.submitted" :form="myForm" />
                     <!-- Exercise 2 -->
                     <!-- Only display the Form if it has NOT been submitted -->
                     <!-- Display the Data Summary ONCE the Form HAS been submitted -->
@@ -21,7 +21,7 @@
             </div>
         </form>
         <hr>
-        <div class="row">
+        <div class="row" v-if="myForm.submitted">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">

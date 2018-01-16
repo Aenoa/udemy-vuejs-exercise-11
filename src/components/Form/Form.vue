@@ -17,7 +17,7 @@
             <label class="form-check-label" for="storage">allow Database storage</label>
         </div>
 
-        <button @click.prevent="form.submitted = true" class="btn btn-success">Submit this</button>
+        <button @click.prevent="submitted" class="btn btn-success">Submit this</button>
     </form>
 </template>
 
@@ -29,6 +29,11 @@
                 required: true,
                 type: Object,
             },
+        },
+        methods: {
+            submitted() {
+                this.form.submitted = true;
+            }
         },
         components: {
             fullname: Fullname,
