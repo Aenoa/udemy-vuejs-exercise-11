@@ -1,13 +1,6 @@
 <template>
     <form>
-        <div class="form-group">
-            <label for="fname">First Name</label>
-            <input class="form-control" id="fname" v-model="form.user.fname" type="text" />
-        </div>
-        <div class="form-group">
-            <label for="lname">Last Name</label>
-            <input class="form-control" id="lname" v-model="form.user.lname" type="text" />
-        </div>
+        <fullname v-model="form.user.fullname" />
 
         <div class="form-group">
             <label for="eml">Email</label>
@@ -29,6 +22,7 @@
 </template>
 
 <script>
+    import Fullname from './Fullname.vue'
     export default {
         props: {
             form: {
@@ -36,8 +30,8 @@
                 type: Object,
             },
         },
-        methods: {
-            
+        components: {
+            fullname: Fullname,
         }
     }
 </script>

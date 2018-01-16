@@ -28,7 +28,7 @@
                         <h4>Your Data</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Full Name: {{myForm.user.fname + ' ' + myForm.user.lname}}</p>
+                        <p>Full Name: {{myForm.user.fullname}}</p>
                         <p>Mail: {{myForm.user.mail}}</p>
                         <p>Password: {{myForm.user.password}}</p>
                         <p>Store in Database?: {{myForm.allowStorage}}</p>
@@ -46,8 +46,7 @@
             return {
                 myForm: {
                     user: {
-                        fname: '',
-                        lname: '',
+                        fullname: '',
                         mail: '',
                         password: '',
                     },
